@@ -17,6 +17,16 @@
 
 #include "BruteForce.h"
 
+/*****************************************************************************
+ * 功能描述： 串的模式匹配BF算法
+ *
+ * @param   SString S 主串
+ * @param   SString T 子串
+ * @param   int iPos 从主串的第一个位置开始
+ *
+ * @return  FALSE 表示失败，返回正数为成功
+ ******************************************************************************/
+ 
 int BFindex(SString S, SString T, int iPos)
 {
 	int i = iPos, j = 1;
@@ -32,7 +42,7 @@ int BFindex(SString S, SString T, int iPos)
 		}
 		else{
 			// 不相等则从主串的第二个字符起再重新和子串进行比较
-			i = i -j + 2;
+			i = i - j + 2;
 			j = 1;
 		}
 	}
